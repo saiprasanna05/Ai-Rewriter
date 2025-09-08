@@ -1,0 +1,153 @@
+/* TextEditor.css */
+.editor-container {
+    display: flex;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .text-editor {
+    width: 66%;
+    padding: 24px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .toptools {
+    display: flex;
+    gap: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .toolbar{
+    display: flex;
+    gap: 8px;
+  
+  }
+  
+  button{
+    font-size: medium;
+    background: none;
+    border: solid black 0.5px;
+    padding: 8px 12px;
+    
+  }
+  .toptools button{
+    font-weight: 100;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .italic {
+    font-style: italic;
+  }
+  
+  .underline {
+    text-decoration: underline;
+  }
+  
+  .align-left {
+    text-align: left;
+  }
+  
+  .align-center {
+    text-align: center;
+  }
+  
+  .align-right {
+    text-align: right;
+  }
+  
+  .editor-content {
+    width: 100%;
+    min-height: 600px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .ai-playground {
+    /* max-width: 34%; */
+    width: 600px;
+    padding: 24px;
+    display: flex;
+  /* flex-wrap: wrap;   */
+  align-items: flex-start; /* Aligns text properly */
+  gap: 8px; 
+  flex-direction: column;  
+  }
+
+  .grammer{
+    margin-bottom: 20px;
+  }
+
+  #display {
+    width: 100%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  /* #display button{
+    width: 50px;
+  } */
+
+  .ai-playground{
+    font-size: large;
+    overflow-wrap: break-word;
+    overflow:scroll;
+  }
+  
+  
+  .ai-playground h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .ai-playground p {
+    color: #666;
+  }
+
+  .ai-playground .gramerchecker{
+    width: 100%;
+    overflow: hidden;
+    font-weight: 400;
+    padding: 8px 16px;
+    border: 2px solid black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    
+    cursor: pointer;
+  }
+  
+  .ai-playground .buttons{
+    
+    display: flex;
+  }
+
+  .toptools{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .actionbuttons{
+    display: flex;
+    
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: row;
+    gap: 8px;
+    
+  }
+
+  .error{
+    color: red;
+  }
+
