@@ -1,7 +1,7 @@
 # AI-Powered Text Editor
 
 An intelligent text editor built with **React** and **Node.js**, powered by the **Google Gemini API** to provide real-time writing assistance.
-# Check master branch for front end code. 
+## Check master branch for front end code. 
 
 ## ✨ Features
 - ✅ **Grammar Correction** – Automatically detects and fixes grammar mistakes as you type.  
