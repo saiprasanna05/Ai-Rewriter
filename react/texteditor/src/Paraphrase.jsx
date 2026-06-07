@@ -4,7 +4,7 @@ import { useEffect, useState, useContext } from "react";
 import "./TextEditor.css"; // Import styles
 
 import { editorReference } from "./Editor";
-
+import SuspenseLoader from "./Suspense";
 
 
 const Paraphrase = (paraActive) => {
@@ -15,6 +15,12 @@ const Paraphrase = (paraActive) => {
     const [content, setContent] = useState(""); // Stores user input
     const [error, seterror] = useState("");
     const [res, setres] = useState("")
+
+    useEffect(() => {
+        if (paraActive) {
+            setContent(editorRef.current.innerText);
+        }
+    }, [paraActive])
 
     useEffect(() => {
         const timer = setTimeout(async () => {
@@ -70,11 +76,7 @@ const Paraphrase = (paraActive) => {
     }
 
 
-    useEffect(() => {
-        if (paraActive) {
-            setContent(editorRef.current.innerText);
-        }
-    }, [paraActive])
+
 
 
 
@@ -86,7 +88,7 @@ const Paraphrase = (paraActive) => {
             <div id="display">
                 <div>
                     {
-                        (res) ? <button onClick={insert}>Insert</button> : ""
+                        (res) ? <button onClick={insert}>Insert</button> : <SuspenseLoader />
                     }
 
                     {
@@ -102,7 +104,8 @@ const Paraphrase = (paraActive) => {
         </div>
 
 
-        // </div >
+
+
     );
 };
 
